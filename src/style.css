@@ -4,7 +4,7 @@ body {
   justify-content: center;
 }
 
-.cartas {
+.card {
   display: inline-block;
   background-color: white;
   border: 1px solid black;
@@ -16,23 +16,22 @@ body {
   position: relative;
 }
 
+.numero {
+  position: absolute;
+  padding-left: 100px;
+  margin-top: 125px;
+  font-size: 100px;
+}
+
 .paloTop {
   position: absolute;
   font-size: 80px;
   top: 0px;
   left: 20px;
 }
-
 .paloBottom {
   position: absolute;
   bottom: 10px;
   right: 20px;
   font-size: 80px;
-}
-
-.numero {
-  position: absolute;
-  padding-left: 100px;
-  margin-top: 125px;
-  font-size: 100px;
 }
