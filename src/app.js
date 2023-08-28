@@ -34,6 +34,8 @@ const generadorDeCartas = () => {
   const valores = valorInfo[random(valorInfo)];
   const simbolo = palosInfo[random(palosInfo)];
 
+  //Creo un condicional para que genere cambios de color segun el simbolo de la carta
+
   if (simbolo === "♦" || simbolo === "♥") {
     palosTop.style.color = "red";
     palosBottom.style.color = "red";
@@ -53,3 +55,7 @@ window.onload = () => {
 //Eveneto de "Click" para que se genere una nueva carta cuando el ususario prinche en el boton
 
 boton.addEventListener("click", () => generadorDeCartas());
+
+//Coloco un "SetInterval" para actualizar la carta cada 10 segundos.
+
+setInterval(generadorDeCartas, 10000);
