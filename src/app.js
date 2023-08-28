@@ -4,27 +4,52 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
+//Selecciono los elementos con los que voy a trabajar
+const valor = document.querySelector("#card-valor");
+const palosTop = document.getElementById("card-Top");
+const palosBottom = document.getElementById("card-Bottom");
+const boton = document.getElementById("boton");
 
-let numeros = [
-  "A",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "J",
-  "Q",
-  "K"
-];
-let palos = ["♦", "♥", "♠", "♣"];
+//Creo una funcion que genere aleatoriamente nuevas cartas con diferentes simbolos y valores
 
-window.onload = () => {
-  let numAleatorio = Math.floor(Math.random() * numeros.length);
-  let palosAleatorio = Math.floor(Math.random() * palos.length);
+const generadorDeCartas = () => {
+  let valorInfo = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K"
+  ];
+  let palosInfo = ["♦", "♥", "♠", "♣"];
 
-  document.getElementById("cards");
+  const random = arr => Math.floor(Math.random() * arr.length);
+  const valores = valorInfo[random(valorInfo)];
+  const simbolo = palosInfo[random(palosInfo)];
+
+  if (simbolo === "♦" || simbolo === "♥") {
+    palosTop.style.color = "red";
+    palosBottom.style.color = "red";
+  } else {
+    palosTop.style.color = "black";
+    palosBottom.style.color = "black";
+  }
+
+  valor.innerHTML = valores;
+  palosTop.innerHTML = simbolo;
+  palosBottom.innerHTML = simbolo;
 };
+window.onload = () => {
+  generadorDeCartas();
+};
+
+//Eveneto de "Click" para que se genere una nueva carta cuando el ususario prinche en el boton
+
+boton.addEventListener("click", () => generadorDeCartas());

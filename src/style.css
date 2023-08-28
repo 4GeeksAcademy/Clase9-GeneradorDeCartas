@@ -1,37 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 100px;
+}
 body {
   background-color: green;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card {
-  display: inline-block;
   background-color: white;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 15px;
   height: 400px;
   width: 250px;
-  margin: auto;
+  margin: 10px;
   padding: 15px;
-  position: relative;
 }
 
-.numero {
-  position: absolute;
-  padding-left: 100px;
-  margin-top: 125px;
-  font-size: 100px;
+.valor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .paloTop {
-  position: absolute;
-  font-size: 80px;
-  top: 0px;
-  left: 20px;
+  display: flex;
+  justify-content: start;
 }
+
 .paloBottom {
-  position: absolute;
-  bottom: 10px;
-  right: 20px;
-  font-size: 80px;
+  display: flex;
+  justify-content: end;
+  margin-top: 45px;
+}
+
+button {
+  color: antiquewhite;
+  background: rgb(110, 19, 19);
+  font-size: 30px;
+  text-align: center;
+  height: 60px;
+  width: 250px;
+  font-family: Verdana, sans-serif;
+  border-radius: 10px;
+  user-select: none;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(68, 11, 11);
 }

@@ -12,12 +12,18 @@
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
-  <body onload="generadorDeCartasAleatorias">
-    <div class="container-fluid text-center">
-      <div class="card" id="cards">
-        <span class="paloTop">♦</span>
-        <span class="numero">5</span>
-        <span class="paloBottom">♦</span>
+  <body class="centar-flex">
+    <div class="card">
+      <div class="paloTop">
+        <span id="card-Top"></span>
       </div>
+      <div class="valor">
+        <span id="card-valor"></span>
+      </div>
+      <div class="paloBottom">
+        <span id="card-Bottom"></span>
+      </div>
+    </div>
+    <button id="boton">Tirar Carta</button>
   </body>
 </html>
