@@ -52,6 +52,13 @@ window.onload = () => {
   generadorDeCartas();
 };
 
+//Funcion para rotar el elemento "palosBottom"
+
+let girarElemento = grados => {
+  palosBottom.style.transform = "rotate(" + grados + "deg)";
+};
+
+girarElemento(180);
 //Eveneto de "Click" para que se genere una nueva carta cuando el ususario prinche en el boton
 
 boton.addEventListener("click", () => generadorDeCartas());
